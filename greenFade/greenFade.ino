@@ -1,6 +1,6 @@
 int greenLED = 5; 
 int GND = 2; 
-int brightness = 0;
+int brightness = 50;
 
 void setup() {
   //this tells the arduino that the pins are outputs (not analog or digital inputs)
@@ -13,9 +13,9 @@ void setup() {
 
 void loop() {
     analogWrite(greenLED, brightness); 
-    delay(250-brightness);
-    brightness++;
-    if (brightness <0){
-        brightness=255;
+    delay(200-brightness);
+    brightness--;
+    if (brightness < 0){
+        brightness=50;
     }
 }
