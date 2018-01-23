@@ -14,7 +14,7 @@ void setup() {
 void loop() {
     analogWrite(greenLED, brightness); 
     delay(200-brightness);
-    brightness--;
+    brightness--;//brightness=brightness-1;
     if (brightness < 0){
         brightness=50;
     }
